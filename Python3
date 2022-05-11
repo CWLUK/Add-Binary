@@ -1,0 +1,23 @@
+class Solution:
+    def addBinary(self, a: str, b: str) -> str:
+        return bin(int(a, 2)+int(b, 2))[2:]
+'''     
+        result = ""
+        i = len(a)
+        j = len(b)
+        carry = 0
+        
+        while (i or j or carry):
+            if i:
+                i = i-1
+                carry += ord(a[i]) - ord("0")
+            if j:
+                j = j-1
+                carry += ord(b[j]) - ord("0")
+                
+            result = str(carry%2) + result
+            carry //= 2;
+        
+        return result
+'''
+        
